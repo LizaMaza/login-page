@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Logg inn</h1>
+
+        <form action="{{ url_for('login') }}" method="POST">
+            <label for="username">Brukernavn:</label>
+            <input type="text" id="username" name="username" required placeholder="Skriv brukernavn">
+
+            <label for="password">Passord:</label>
+            <input type="password" id="password" name="password" required placeholder="Skriv passord">
+
+            <button type="submit">Logg inn</button>
+        </form>
+
+        <p class="links">
+            Har du ikke konto?
+            <a href="{{ url_for('register') }}">Opprett ny bruker</a>
+        </p>
+        <p class="links">
+            <a href="{{ url_for('list_users') }}">Se alle brukere </a>
+        </p>
+    </div>
+</body>
+</html>

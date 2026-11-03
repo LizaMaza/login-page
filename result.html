@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resultat</h1>
+
+        <p class="message">{{ msg }}</p>
+
+        <p class="links">
+            <a href="{{ url_for('index') }}">Tilbake til login</a>
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Opprett bruker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Opprett ny bruker</h1>
+
+        <form action="{{ url_for('adduser') }}" method="POST">
+            <label for="username">Brukernavn:</label>
+            <input type="text" id="username" name="username" required placeholder="Velg brukernavn">
+
+            <label for="password">Passord:</label>
+            <input type="password" id="password" name="password" required placeholder="Velg passord">
+
+            <button type="submit">Opprett bruker</button>
+        </form>
+
+        <p class="links">
+            <a href="{{ url_for('index') }}">Tilbake til login</a>
+        </p>
+    </div>
+</body>
+</html>
